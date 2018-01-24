@@ -3,9 +3,79 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Meme Generator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<style>
+		.top-caption {
+			top: 0%;
+			bottom: auto;
+		}
+		.bottom-caption {
+			bottom: 0%;
+			top: auto;
+		}
+	</style>
+
 </head>
 <body>
-	
+	<div class="col-10 mx-auto border-left border-left bg-light">
+		<div class="container bg-dark py-3 rounded-bottom">
+			<form id="input-form">
+				<div class="form-group" id="first-line-form">
+    				<label for="first-line-text" class="text-light">First line:</label>
+				    <input type="text" class="form-control" id="first-line-text" aria-describedby="first-line-help" placeholder="Enter first line text">
+				    <small id="first-line-help" class="form-text text-muted">You can any text and it will appear in the top quarter of the picture.</small>
+				</div>
+				<div class="form-group" id="image-source-form">
+    				<label for="image-source-text" class="text-light">Web address of the picture to use:</label>
+				    <input type="text" class="form-control" id="image-source-text" aria-describedby="image-source-help" placeholder="Paste the web address here">
+				    <small id="image-source-help" class="form-text text-muted">You can use any size picture from the web, but be aware that the size will be adjusted to fit.</small>
+				</div>
+				<div class="form-group" id="second-line-form">
+    				<label for="second-line-text" class="text-light">Second line:</label>
+				    <input type="text" class="form-control" id="second-line-text" aria-describedby="second-line-help" placeholder="Enter second line text">
+				    <small id="second-line-help" class="form-text text-muted">You can any text and it will appear in the bottom quarter of the picture.</small>
+				</div>
+				<button class="btn btn-default btn-block" id="submit-button">
+					<i class="fa fa-check"></i>
+				</button>
+			</form>
+		</div>
+		<div class="container py-3 rounded d-flex flex-wrap justify-content-around" id="meme-container">
+			<div class="meme-box col-5 d-inline-block my-2 mx-2">
+				<div class="carousel slide">
+					<div class="carousel-caption top-caption">One does not simply...</div>
+					<img src="https://images.moviepilot.com/image/upload/c_fill,h_470,q_auto:good,w_620/d0ngb2rce5f6tmet1ctq.jpg" class="d-block img-fluid" alt="Meme image">
+					<div class="carousel-caption bottom-caption">walk into Mordor</div>	
+				</div>
+				
+				<button class="delete-button btn btn-info btn-block btn-sm">
+					<i class="fa fa-times fa-2x"></i>
+			</div>
+			
+			<div class="meme-box col-5 d-inline-block my-2 mx-2">
+				<div class="carousel slide">
+					<div class="carousel-caption top-caption">One does not simply...</div>
+					<img src="https://imgflip.com/s/meme/Creepy-Condescending-Wonka.jpg" class="d-block img-fluid" alt="Meme image">
+					<div class="carousel-caption bottom-caption">walk into Mordor</div>	
+				</div>
+				<button class="delete-button btn btn-info btn-block btn-sm">
+					<i class="fa fa-times fa-2x"></i>
+			</div>
+			
+			<div class="meme-box col-5 d-inline-block my-2 mx-2">
+				<div class="carousel slide">
+					<div class="carousel-caption top-caption">One does not simply...</div>
+					<img src="http://www.howtochoosealaptop.com/wp-content/uploads/2017/02/meme-roll-safe.jpg" class="d-block img-fluid" alt="Meme image">
+					<div class="carousel-caption bottom-caption w-fit">walk into Mordor</div>	
+				</div>
+				<button class="delete-button btn btn-info btn-block btn-sm">
+					<i class="fa fa-times fa-2x"></i>
+			</div>
+
+		</div>
+	</div>
+
 	<script src="generator.js"></script>
 </body>
 </html>
