@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	submitButton.addEventListener('click', function(event) {
 		memeGenerator();
 		event.preventDefault();
+		document.getElementById('input-form').reset();
 		addDelete();
 	});
 
