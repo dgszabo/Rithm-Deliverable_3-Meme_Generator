@@ -14,11 +14,22 @@
 			bottom: 0%;
 			top: auto;
 		}
+		.delete-button {
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+		}
 	</style>
 
 </head>
 <body>
-	<div class="col-10 mx-auto border-left border-left bg-light">
+	<nav class="navbar navbar-light position-sticky fixed-top" style="background-color: #e3f2fd;">
+  		<a class="navbar-brand" href="#">Meme Generator App</a>
+  		<div class="pull-right small">
+  			by Daniel
+  		</div>
+	</nav>
+
+	<div class="col-8 mx-auto border-left border-left bg-light">
 		<div class="container bg-dark py-3 rounded-bottom">
 			<form id="input-form">
 				<div class="form-group" id="first-line-form">
@@ -28,7 +39,7 @@
 				</div>
 				<div class="form-group" id="image-source-form">
     				<label for="image-source-text" class="text-light">Web address of the picture to use:</label>
-				    <input type="text" class="form-control" id="image-source-text" aria-describedby="image-source-help" placeholder="Paste the web address here">
+				    <input type="url" class="form-control" id="image-source-text" aria-describedby="image-source-help" placeholder="Paste the web address here">
 				    <small id="image-source-help" class="form-text text-muted">You can use any size picture from the web, but be aware that the size will be adjusted to fit.</small>
 				</div>
 				<div class="form-group" id="second-line-form">
@@ -41,6 +52,7 @@
 				</button>
 			</form>
 		</div>
+		
 		<div class="container py-3 rounded d-flex flex-wrap justify-content-around" id="meme-container">
 			<div class="meme-box col-5 d-inline-block my-2 mx-2">
 				<div class="carousel slide">
@@ -70,7 +82,7 @@
 					<div class="carousel-caption bottom-caption w-fit">walk into Mordor</div>	
 				</div>
 				<button class="delete-button btn btn-info btn-block btn-sm">
-					<i class="fa fa-times fa-2x"></i>
+					<span class="fa fa-times fa-2x"></span>
 			</div>
 
 		</div>
